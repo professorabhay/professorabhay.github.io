@@ -1,5 +1,5 @@
 import {FreeQueue} from "../../../lib/free-queue.js";
-import { QUEUE_SIZE } from './constants.js';
+import {QUEUE_SIZE} from './constants.js';
 
 const toggleButton = document.getElementById('toggle');
 toggleButton.disabled = false;

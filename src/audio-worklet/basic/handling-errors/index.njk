@@ -1,0 +1,28 @@
+---
+eleventyNavigation:
+  key: handling-error
+  title: Handling Errors
+  parent: audio-worklet
+to_root_dir: ../../../
+---
+
+{% extends "../../../_includes/base.njk" %}
+
+{% block content %}
+
+<h1>{{ eleventyNavigation.title }}</h1>
+<p>A simple demonstration on how to catch an error from AudioWorkletProcessor
+  with onprocessorerror event handler in AudioWorkletNode. Open up the console
+  to see the events being fired.</p>
+<p>See
+  <a href="https://developer.chrome.com/blog/audio-worklet/" target="_blank">
+  Chrome Developers Article: Enter Audio Worklet</a> for more information.</p>
+
+<div class="demo-box">
+  <button id="button-start" disabled>START</button>
+  {% include "../../../_includes/example-source-code.njk" %}
+</div>
+
+<script src="./main.js" type="module"></script>
+
+{% endblock %}

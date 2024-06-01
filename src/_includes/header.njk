@@ -1,0 +1,18 @@
+{% set breadcrumbData =
+    collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+
+<div class="flex pb-3">
+  {% for destination in breadcrumbData %}
+    <div class="mr-2">
+      <a href="{{ page | relativePath(destination.url) }}">
+        {{ destination.title }}
+      </a>
+    </div>
+    <span class="mr-2">
+      &#9656;
+    </span>
+  {% endfor %}
+  <div>
+    {{ eleventyNavigation.title }}
+  </div>
+</div>

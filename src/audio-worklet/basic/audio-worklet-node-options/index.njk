@@ -1,0 +1,44 @@
+---
+eleventyNavigation:
+  key: using-options-for-audio-worklet-node
+  title: Using Options for AudioWorkletNode
+  parent: audio-worklet
+to_root_dir: ../../../
+---
+
+{% extends "../../../_includes/base.njk" %}
+
+{% block content %}
+
+<h1>{{ eleventyNavigation.title }}</h1>
+<p>A simple AudioWorkletNode constructor example that passes options of
+  waveform type and freqency to the matching AudioWorkletProcessor constructor.
+  </p>
+<p>See
+  <a href="https://developer.chrome.com/blog/audio-worklet/" target="_blank">
+  Chrome Developers Article: Enter Audio Worklet</a> for more information.</p>
+
+<div class="demo-box">
+  <div class="p-3 mb-2 bg-slate-100 w-1/3 rounded text-sm text-right">
+    <label for="type" class="mr-1">Waveform</label>
+    <select name="type" id="demo-select-waveform-type"
+      class="p-1 rounded w-1/2 font-semibold">
+      <option value="sine">Sine</option>
+      <option value="triangle">Triangle</option>
+      <option value="square">Square</option>
+      <option value="sawtooth">Sawtooth</option>
+      <option value="noise">Noise</option>
+    </select>
+  </div>
+  <div class="p-3 mb-2 bg-slate-100 w-1/3 rounded text-sm text-right">
+    <label for="frequency" class="mr-1">Frequency (Hz)</label>
+    <input type="number" name="frequency" id="demo-input-frequency"
+      class="p-1 rounded w-1/2 font-semibold" min="1" max="20000" value=440>
+  </div>
+  <button id="button-start" disabled>START</button>
+  {% include "../../../_includes/example-source-code.njk" %}
+</div>
+
+<script src="./main.js" type="module"></script>
+
+{% endblock %}

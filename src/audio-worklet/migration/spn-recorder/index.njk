@@ -1,0 +1,72 @@
+---
+eleventyNavigation:
+  key: shim-spn-demo
+  title: ScriptProcessor Recording App
+  parent: audio-worklet
+to_root_dir: ../../../
+---
+
+{% extends "../../../_includes/base.njk" %}
+
+{% block content %}
+
+<style>
+  .recording-display {
+    display: flex;
+    align-items: center;
+  }
+
+  #recording-canvas {
+    flex: 1 95%;
+    height: 200px;
+    border: 1px solid rgb(156 163 175 / var(--tw-border-opacity));
+    border-radius: 6px;
+    margin: 1em 0;
+  }
+
+  #vu-meter {
+    flex: 1;
+    height: 200px;
+    width: 30px;
+    border: 1px solid rgb(156 163 175 / var(--tw-border-opacity));
+    border-radius: 6px;
+    margin: 1em 0px 1em 5px;
+  }
+  
+</style>
+
+<h1>ScriptProcessorNode Audio Recorder</h1>
+<p>A simple audio recorder built with ScriptProcessorNode that
+  can record up to 5 minutes and stops automatically. Upon completion, it 
+  provides a downloadable link for the recorded audio file (PCM Wave). It 
+  may take a few seconds to build and preview the recording. Click Refresh 
+  to start a new recording.</p>
+
+<div class="demo-box">
+  <div id="recording">
+    <div>
+      <p>Length: <span id="data-len">0</span>sec</p>
+      <button disabled id="record">
+        <span id="record-text">Start</span> Recording
+      </button>
+      <button disabled id="stop">
+        Stop Recording
+      </button>
+      <a id="download-link">
+        <button disabled id="download-button">Download File</button>
+      </a>
+    </div>
+
+    <div class="recording-display">
+      <canvas id="recording-canvas"></canvas>
+      <canvas id="vu-meter"></canvas>
+    </div>
+
+      <audio id="player" class="w-full" controls></audio>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+
+{% endblock %}

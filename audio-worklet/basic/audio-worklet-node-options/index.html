@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Using Options for AudioWorkletNode | Web Audio Samples
+    </title>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="../../../styles.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+  </head>
+  <body>
+
+    <div>
+      <div id="header" class="py-12">
+        
+          <div class="w-full px-6 md:max-w-4xl md:mx-auto">
+            
+
+<div class="flex pb-3">
+  
+    <div class="mr-2">
+      <a href="../../..">
+        Home
+      </a>
+    </div>
+    <span class="mr-2">
+      &#9656;
+    </span>
+  
+    <div class="mr-2">
+      <a href="../..">
+        AudioWorklet
+      </a>
+    </div>
+    <span class="mr-2">
+      &#9656;
+    </span>
+  
+  <div>
+    Using Options for AudioWorkletNode
+  </div>
+</div>
+
+          </div>
+        
+      </div>
+    
+      <div id="content">
+        <div class="w-full px-6 md:max-w-4xl md:mx-auto">
+          
+
+<h1>Using Options for AudioWorkletNode</h1>
+<p>A simple AudioWorkletNode constructor example that passes options of
+  waveform type and freqency to the matching AudioWorkletProcessor constructor.
+  </p>
+<p>See
+  <a href="https://developer.chrome.com/blog/audio-worklet/" target="_blank">
+  Chrome Developers Article: Enter Audio Worklet</a> for more information.</p>
+
+<div class="demo-box">
+  <div class="p-3 mb-2 bg-slate-100 w-1/3 rounded text-sm text-right">
+    <label for="type" class="mr-1">Waveform</label>
+    <select name="type" id="demo-select-waveform-type"
+      class="p-1 rounded w-1/2 font-semibold">
+      <option value="sine">Sine</option>
+      <option value="triangle">Triangle</option>
+      <option value="square">Square</option>
+      <option value="sawtooth">Sawtooth</option>
+      <option value="noise">Noise</option>
+    </select>
+  </div>
+  <div class="p-3 mb-2 bg-slate-100 w-1/3 rounded text-sm text-right">
+    <label for="frequency" class="mr-1">Frequency (Hz)</label>
+    <input type="number" name="frequency" id="demo-input-frequency"
+      class="p-1 rounded w-1/2 font-semibold" min="1" max="20000" value=440>
+  </div>
+  <button id="button-start" disabled>START</button>
+  <div class="text-sm text-right">
+  <a href="https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/src/audio-worklet/basic/audio-worklet-node-options/" target="_blank">
+    source code
+  </a>
+</div>
+</div>
+
+<script src="./main.js" type="module"></script>
+
+
+        </div>
+      </div>
+
+      <div id="footer" class="py-8">
+        <div class="w-full px-6 md:max-w-4xl md:mx-auto">
+          <div class="footer py-6 text-gray-500">
+  <div class="flex pb-3">
+    
+      <div class="mr-1">
+        <a href="https://googlechromelabs.github.io/web-audio-samples/" target="_blank">Home</a>
+      </div>
+      
+      <span class="mr-1">
+        &#9585;
+      </span>
+      
+    
+      <div class="mr-1">
+        <a href="https://github.com/GoogleChromeLabs/web-audio-samples/" target="_blank">Sources</a>
+      </div>
+      
+      <span class="mr-1">
+        &#9585;
+      </span>
+      
+    
+      <div class="mr-1">
+        <a href="https://github.com/GoogleChromeLabs/web-audio-samples/issues/new" target="_blank">Report issues</a>
+      </div>
+      
+      <span class="mr-1">
+        &#9585;
+      </span>
+      
+    
+      <div class="mr-1">
+        <a href="https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EWebAudio" target="_blank">Report Chrome issues</a>
+      </div>
+      
+    
+  </div>
+  <div class="pb-3">
+    2010-2024 Chromium authors
+    (b019a08)
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57132539-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-57132539-4');
+    </script>
+  </body>
+</html>

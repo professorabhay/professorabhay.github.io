@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      ScriptProcessor Recording App | Web Audio Samples
+    </title>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="../../../styles.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+  </head>
+  <body>
+
+    <div>
+      <div id="header" class="py-12">
+        
+          <div class="w-full px-6 md:max-w-4xl md:mx-auto">
+            
+
+<div class="flex pb-3">
+  
+    <div class="mr-2">
+      <a href="../../..">
+        Home
+      </a>
+    </div>
+    <span class="mr-2">
+      &#9656;
+    </span>
+  
+    <div class="mr-2">
+      <a href="../..">
+        AudioWorklet
+      </a>
+    </div>
+    <span class="mr-2">
+      &#9656;
+    </span>
+  
+  <div>
+    ScriptProcessor Recording App
+  </div>
+</div>
+
+          </div>
+        
+      </div>
+    
+      <div id="content">
+        <div class="w-full px-6 md:max-w-4xl md:mx-auto">
+          
+
+<style>
+  .recording-display {
+    display: flex;
+    align-items: center;
+  }
+
+  #recording-canvas {
+    flex: 1 95%;
+    height: 200px;
+    border: 1px solid rgb(156 163 175 / var(--tw-border-opacity));
+    border-radius: 6px;
+    margin: 1em 0;
+  }
+
+  #vu-meter {
+    flex: 1;
+    height: 200px;
+    width: 30px;
+    border: 1px solid rgb(156 163 175 / var(--tw-border-opacity));
+    border-radius: 6px;
+    margin: 1em 0px 1em 5px;
+  }
+  
+</style>
+
+<h1>ScriptProcessorNode Audio Recorder</h1>
+<p>A simple audio recorder built with ScriptProcessorNode that
+  can record up to 5 minutes and stops automatically. Upon completion, it 
+  provides a downloadable link for the recorded audio file (PCM Wave). It 
+  may take a few seconds to build and preview the recording. Click Refresh 
+  to start a new recording.</p>
+
+<div class="demo-box">
+  <div id="recording">
+    <div>
+      <p>Length: <span id="data-len">0</span>sec</p>
+      <button disabled id="record">
+        <span id="record-text">Start</span> Recording
+      </button>
+      <button disabled id="stop">
+        Stop Recording
+      </button>
+      <a id="download-link">
+        <button disabled id="download-button">Download File</button>
+      </a>
+    </div>
+
+    <div class="recording-display">
+      <canvas id="recording-canvas"></canvas>
+      <canvas id="vu-meter"></canvas>
+    </div>
+
+      <audio id="player" class="w-full" controls></audio>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+
+
+        </div>
+      </div>
+
+      <div id="footer" class="py-8">
+        <div class="w-full px-6 md:max-w-4xl md:mx-auto">
+          <div class="footer py-6 text-gray-500">
+  <div class="flex pb-3">
+    
+      <div class="mr-1">
+        <a href="https://googlechromelabs.github.io/web-audio-samples/" target="_blank">Home</a>
+      </div>
+      
+      <span class="mr-1">
+        &#9585;
+      </span>
+      
+    
+      <div class="mr-1">
+        <a href="https://github.com/GoogleChromeLabs/web-audio-samples/" target="_blank">Sources</a>
+      </div>
+      
+      <span class="mr-1">
+        &#9585;
+      </span>
+      
+    
+      <div class="mr-1">
+        <a href="https://github.com/GoogleChromeLabs/web-audio-samples/issues/new" target="_blank">Report issues</a>
+      </div>
+      
+      <span class="mr-1">
+        &#9585;
+      </span>
+      
+    
+      <div class="mr-1">
+        <a href="https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EWebAudio" target="_blank">Report Chrome issues</a>
+      </div>
+      
+    
+  </div>
+  <div class="pb-3">
+    2010-2024 Chromium authors
+    (b019a08)
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57132539-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-57132539-4');
+    </script>
+  </body>
+</html>
